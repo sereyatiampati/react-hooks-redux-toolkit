@@ -2,9 +2,11 @@ import React from "react";
 
 function CatList({ catPics = [] }) {
   return (
-    <div>
+    <div style={{display: 'flex', flexWrap: 'wrap'}}>
       {catPics.map((pic) => (
-        <img key={pic.id} src={pic.url} alt="cat" />
+        <div class="card" style={{width: "18rem", margin: '2rem'}} key={pic.id}>
+          <img src={pic.url} class="card-img-top" alt="..."/>
+      </div>
       ))}
     </div>
   );
